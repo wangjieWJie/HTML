@@ -1,0 +1,107 @@
+<!DOCTYPE html> <!--文档类型声名标签，告诉浏览器使用、哪个HTML版本来显示网页。这里的HTML指的是HTML5版本-->
+<html lang="en"> <!--语言种类 en 是英语网页， zh-CN 是中文网页，fr是法文网站，作用就是谷歌翻译检测时能够知道怎么翻译-->
+
+<!-- ctrl + / 即可快速注释 -->
+
+<head>
+    <meta charset="UTF-8"> <!--字符集 这个"UTF-8"也叫做"万国码"-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WJ练习页面</title>
+</head>
+
+<body>
+    <h1>超链接</h1>
+    <h4 id="MDmaodian">锚点</h4>
+    <p><a href="#">点击进入空链接</a></p>
+    <p>上面的这个句子我自作主张把他放进了一个段落中，发现效果很好</p>
+
+    <p>不写 target 看看它的默认值是打开一个新页面还是直接覆盖当前页面</p>
+    <p><a href="http://baidu.com"> 点击打开百度 </a></p>
+    <p>结果是显而易见的，即便是在eage这个倾向于打开新标签页的浏览器中，他还是直接覆盖了当前页面，也就是说执行了默认值 _self </p>
+
+    <p>需要注意的是，当链接内内容为<a href="file/geek.zip">压缩包</a>或者是一个文件的时候，点击链接就会下载这个文件</p>
+    <p>在上面的句子中我耍了一个小聪明，把链接放在了“压缩包”这三个字两边，所以只有压缩包这三个字有链接属性</p>
+    <h2> 空格</h2>
+    <h2> 空格</h2>
+    <h2> 空格</h2>
+    <h2> 空格</h2>
+    <h2> 空格</h2>
+    <h2> 空格</h2>
+    <h2> 空格</h2>
+    <h2> 空格</h2>
+    <h2> 空格</h2>
+    <h2> 空格</h2>
+    <h2> 空格</h2>
+    <h2> 空格</h2>
+    <h2> 空格</h2>
+    <h2> 空格</h2>
+    <h2> 空格</h2>
+    <h2> 空格</h2>
+    <h2> 空格</h2>
+    <h2> 空格</h2>
+    <h2> 空格</h2>
+    <h2> 空格</h2>
+    <h2> 空格</h2>
+    <h2> 空格s</h2>
+
+
+    <table align="center" border="2" cellpadding="9" cellspacing="0" width="580" height="260">
+        <!-- align 是对齐的意思，功能是确定表格在页面中的位置-->
+        <!-- border 是边框的意思，后面的数字代表的是边框的粗细，不写或者写 0 都代表没有边框-->
+        <!-- cellpadding 代表单元格中的文字和单元格边框之间的距离，默认1像素 -->
+        <!-- height 和 wdith 分别代表了表格的高和宽，单位是像素 -->
+
+
+        <thead>
+            <tr>
+                <th colspan="5">期末考试成绩</th>
+            </tr>
+
+
+            <tr>
+                <th> 姓名 </th>
+                <th> 总成绩 </th>
+                <th> 语文 </th>
+                <th> Math </th>
+                <th> English </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <th> 邢文博 </th>
+                <td> 250 </td>
+                <td> 48 </td>
+                <td> 70 </td>
+                <td> 30 </td>
+            </tr>
+
+            <tr>
+                <th>李爱强</th>
+                <td>000</td>
+                <td> 80 </td>
+                <td> 60 </td>
+                <td> 40 </td>
+            </tr>
+            <tr>
+
+                <th><a href="https://cidian.qianp.com/ci/%E4%BA%91%E6%B3%BD" target="_blank">豆云泽</a></th>
+                <td> 90 </td>
+                <td> 20 </td>
+                <td> 30</td>
+                <td> 40 </td>
+            </tr>
+        </tbody>
+
+
+    </table>
+
+
+
+
+
+    <p>下面是一个锚点链接</p>
+    <p><a href="#MDmaodian">点击此锚点返回上面锚点处</a></p>
+</body>
+
+</html>
