@@ -20,24 +20,56 @@
         <!-- action 是存储用户填写的数据的文件。 method 是传送这些数据的传输方式。 name是这个表单的名称 -->
 
         <!-- text 文本框 用户可以从输入任何文本 -->
-        投保人姓名： <input type="text" name="useername"><br>
-        投保人性别：<input type="radio" name="sex">男 <input type="radio" name="sex">女<br><!-- radio 是单选的意思，圆形选择按钮-->
+        投保人姓名： <input type="text" name="useername" value="请输入您的姓名"><br>
+        投保人性别：<input type="radio" name="sex" value="男" id="nan"><label for="nan">男</label> <input type="radio"
+            name="sex" value="女" id="nv"><label for=nv>女</label><br><!-- radio 是单选的意思，圆形选择按钮-->
         <!-- name 是表单元素名字 ，这里性别单选按钮必须有相同名字的name，才可以实现单选 -->
-        投保人身份证号：<input type="text" name="idnum"><br>
-        投保人银行卡号：<input type="text" name="bankID"><br>
-        银行卡密码： <input type="password" name="pswd"><br><!-- password:定义密码字段，该字段中的字符被掩码 -->
+        请选择您的国籍 <select> <!-- select 下拉列表       注意：select 里面至少包含一堆选项-->
+            <option>外国</option>
+            <option selected="selected">中国</option> <!-- selected : 此属性表示默认选项（默认以选择） -->
+
+        </select><br>
+        投保人身份证号：<input type="text" name="idnum" value="请输入你的身份证号"><br>
+        请上传您的身份证正面照片： <input type="file"><br>
+        您的手机号：<input type="text" name="num" value="+86" maxlength="11"><br>
+        您收到的短信验证码：<input type="text" name="num_text" value="五位验证码"> <input type="button" value="点击发送验证码"> <br>
+        投保人银行卡号：<input type="text" name="bankID" value="请输入您的银行卡号"><br>
+        银行卡密码： <input type="password" name="pswd" value="请输入您上面的银行卡的对应密码" maxlength="15">
+        <br><!-- password:定义密码字段，该字段中的字符被掩码 -->
         是否同意以下条款：<br>
         <!-- checkbox 复选框，可以多选 这个pink老师说多选的name也要相同才能多选，我认为不是这样，但是一样的名字绝对是有利于数据的统计的，往后台发数据知道发的是什么。但是不一样的名字绝地是可以多选的 -->
-        <input type="checkbox" name="agreement"><a href="https://privacy.qq.com/policy/kids-privacypolicy"
+        <input type="checkbox" name="agreement" value="条款1"><a href="https://privacy.qq.com/policy/kids-privacypolicy"
             target="blank">《腾讯未成年人保护法》</a><br>
-        <input type="checkbox" name="agreement"><a href="https://privacy.qq.com/policy/cookie-privacypolicy"
-            target="blank">《腾讯侵权行为默认书》</a><br>
-        <input type="checkbox" name="agreement"><a href="https://privacy.qq.com/policy/tencent-privacypolicy"
-            target="blank">《腾讯诱导充值认可书》</a><br>
+        <input type="checkbox" name="agreement" id="agreement"><a
+            href="https://privacy.qq.com/policy/cookie-privacypolicy" target="blank"><label
+                for="agreement">《腾讯侵权行为默认书》</label></a><br>
+        <!-- 这里的属性值根据包含和被包含关系产生了不同的优先级，在上面这种情况下，因为 label 在最内部，所以近水楼台先得月，点击《默认书》并不会跳转到相关条文页面，而是选择上label所链接的复选框 -->
+        <input type="checkbox" name="agreement" value="条款3" checked="checked"><a
+            href="https://privacy.qq.com/policy/tencent-privacypolicy" target="blank">《腾讯诱导充值认可书》</a><br>
+        <h4>注意：请仔细阅读以下协议并作出判断</h4>
+        <p>您是否已经了解了人瘦保险并且真的想要为人寿保险的发展出一份力？</p>
+        <p>您是否对这个世界再无牵挂？</p>
+        <input type="checkbox" name="very_agreement" id="very_agmt" />
+        <label for="very_agmt"><mark><strong><em>我已仔细了解过人瘦保险并且对这个世界了无牵挂</em></strong></mark></label><br>
+        <!-- 这里用到了 label 标签 ： 点击上面被 label 按钮括起来的文字就可以链接到同 id 复选框里面，从而大大提高了用户体验 -->
+        <h5>请写下您对这个世界最后想说的话吧：</h5><br>
+        <textarea rows="5" cols="60">在此处输入您的留言吧！</textarea><br>
+        <!-- 这是 文本域 用来输入长文本的，我这里把他们放在了一行里面，可以把他们放在两行里，那么输入的字符就会居中，并且在这个标签之间输入什么就显示什么，空格也能录入在网页中-->
+
+
+
+
+        <br><input type="reset" value="重新填写"> <input type="submit" value="免费领取人瘦保险">
+        <!-- <br><input type="image" value="重新填写"> -->
 
     </form>
+    <!-- name 和 value 是每个表单元素都有的属性值，主要给后台人员使用 -->
+    <!-- name 是表单元素的名字，用来区别不同的表单元素 -->
+    <!-- value 是表单元素的值，传输数据的时候就是传输的这个值 -->
+    <!-- 单选按钮和复选框可以设置checked 属性，当页面打开时就可以默认选中这个按钮 -->
+    <!-- maxlength 用来规定输入字符中字符的最大长度 -->
 
-
+    <!-- 看到了第50节 -->
 
 </body>
 
