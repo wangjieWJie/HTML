@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ZH-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AXIAO贷款注册</title>
+</head>
+
+<body>
+
+    <!-- 前面已经大体完成了表单相关内容的的学习，但是还有一个问题就是，表单的排列不够美观，细节不到位，文字上下间隔太小等问题 -->
+    <!-- 所以，在这个注册表中，我会通过运用之前学过的 列表和表格的相关知识来完善表单的制作，使其更加精致-->
+
+    <h1 align="center">AXIAO借贷</h1>
+    <h3 align="center">青春不常在，自由就得贷</h3>
+    <!-- thead 和 tbody 就不往这里面写了，因为他真的没有这些结构 -->
+    <table align="center">
+        <tr>
+            <td>姓名：</td>
+            <td><input type="text" name="name"> </td>
+        </tr>
+        <tr>
+            <td>性别：</td>
+            <td>
+                <input type="radio" name="sex" id="nan"><label for="nan">
+                    <!-- <a herf="https://tse4-mm.cn.bing.net/th/id/OIP-C.HPvxRP5tHU8Ql2l1UDb_9gHaLH?w=186&h=279&c=7&r=0&o=5&pid=1.7"target="_blank"> </a> -->
+                    <img src="file/nan.png" height="20" title="男生" />男</label>
+                <input type="radio" name="sex" id="nv"><label for="nv"><img src="file/nv.png" height="20" />女</label>
+            </td>
+        </tr>
+        <tr>
+            <td>居住地：</td>
+            <td>
+                <input type="text" name="addrass" value="具体到门牌号">
+            </td>
+        </tr>
+        <tr>
+            <td>身份证号：</td>
+            <td><input type="text"> </td>
+        </tr>
+        <tr>
+            <td>婚姻状况：</td>
+            <td> <input type="radio" name="marriage" id="singal">
+                <label for="singal">未婚</label>
+                <input type="radio" name="marriage" id="married"><label for="married">已婚</label>
+                <input type="radio" name="marriage" id="divorced"> <label for="divorced">离婚</label>
+            </td>
+        </tr>
+        <tr>
+            <td>担保人：</td>
+            <td>
+                <select>
+                    <option>--请选择担保人--</option>
+                    <option>父母</option>
+                    <option>妻子</option>
+                    <option>子女</option>
+                    <option>朋友</option>
+                    <option>法人</option>
+                    <option>兄弟</option>
+                    <option>政府</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>担保人身份证号：</td>
+            <td> <input type="text"> </td>
+        </tr>
+        <tr>
+            <td>期望申请额度：</td>
+            <td><select>
+                    <option>--期望额度--</option>
+                    <option>5K</option>
+                    <option>10K</option>
+                    <option>15K</option>
+                    <option>20K</option>
+                    <option>30K</option>
+                    <option>40K</option>
+                    <option>60K</option>
+                    <option>80K</option>
+                    <option>100K</option>
+                    <option>120K及以上</option>
+                </select></td>
+        </tr>
+        <tr>
+            <td>家庭情况及资产说明： </td>
+            <td> <textarea rows="3" cols="30">申请贷款原因、家庭财产概括、家庭收入来源、家庭成员说明等等，请详细说明</textarea> </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td> <input type="submit" value="提交申请"> </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="checkbox" name="agrrement" id="agr">我同意<a href="#" target="_blank">借贷申请条款</a>和<a href="#"
+                    target="_blank">定期归还合同</a></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <h4>我们承诺</h4>
+                <ul>
+                    <li>提供绝对专业团队为您的困境开辟道路</li>
+                    <li>保证绝对合理的利率，绝不在您困难时落井下石</li>
+                    <li>保障绝对人性的服务，无论结果如何，你都是我们的上帝</li>
+                    <li>许诺绝对诚信，绝不浮动的利率</li>
+
+                </ul>
+            </td>
+        </tr>
+
+    </table>
+</body>
+
+</html>
