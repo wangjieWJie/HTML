@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 初步了解</title>
+
+    <style>
+        /* CSS就是  ：  选择器{样式:数值} */
+        /* 或      ：  给谁改样式{改什么样式} */
+        /* CSS基础选择器： */
+        /* 1. 标签选择器 */
+        p {
+            /*-- 修改 所有<p>标签的颜色为红色 --*/
+            color: pink;
+            /* 将p标签中的文字修改为36像素*/
+            font-size: 36px;
+        }
+
+        /* 2. 类选择器 */
+        /* 调用后才能使用，可以使相同标签差异化。  注：不可和已知标签名冲突 */
+        .MY_style {
+            color: darkgreen;
+            font-size: 28px;
+        }
+
+        .YOU_style {
+            color: darkorange;
+            font-size: 22px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <p>我怎么是粉色的！难道是被CSS修改了？</p>
+
+    <div class="MY_style"> 我是我的风格 </div>
+    <ul>
+        <li class="MY_style">魔法士</li>
+        <li class="YOU_style"> 长征 </li>
+        <li> 百事</li>
+    </ul </body>
+
+</html>
