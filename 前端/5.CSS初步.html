@@ -20,6 +20,7 @@
 
         /* 2. 类选择器 */
         /* 调用后才能使用，可以使相同标签差异化。  注：不可和已知标签名冲突 */
+        /* 多个类乐意放在同一个 class 里面，叫做多类（详见练习） */
         .MY_style {
             color: darkgreen;
             font-size: 28px;
@@ -28,6 +29,20 @@
         .YOU_style {
             color: darkorange;
             font-size: 22px;
+        }
+
+        /* 3.id 选择器 */
+        /* 设置后只能被调用一次，调用后失活 */
+        #black-pink {
+            color: rgb(53, 2, 42);
+        }
+
+        /* 4.通配符选择器  */
+        /* 他会把 html、body、div、span、li 等等所有的标签中的内容统一改成下面的格式 */
+        /* 不需要调用，特殊情况才会使用这个 */
+        * {
+            color: bisque;
+            font-family: '楷体';
         }
     </style>
 
@@ -43,5 +58,12 @@
         <li class="YOU_style"> 长征 </li>
         <li> 百事</li>
     </ul </body>
+
+    <div id="black-pink"> 粉墨年华</div>
+
+    <!-- 二： CSS 字体属性 -->
+
+    <!-- 1. 字体-->
+    <!-- CSS 使用 font-family 设置字体-->
 
 </html>
