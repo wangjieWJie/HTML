@@ -16,6 +16,10 @@
             color: pink;
             /* 将p标签中的文字修改为36像素*/
             font-size: 36px;
+            font-family: '微软雅黑', 'microsoft YaHei';
+            text-align: center;
+            /* 文本对齐方式设置 */
+
         }
 
         /* 2. 类选择器 */
@@ -40,10 +44,35 @@
         /* 4.通配符选择器  */
         /* 他会把 html、body、div、span、li 等等所有的标签中的内容统一改成下面的格式 */
         /* 不需要调用，特殊情况才会使用这个 */
+        /* 字体设置 */
         * {
             color: bisque;
-            font-family: '楷体';
+            font-family: '楷体', "microsoft YaHei";
+            /*  可以写多个字体，中间用逗号隔开，但是中间有空格的字体必须要用单引号或者双引号括起来*/
+            /* 使用多个字体的目的是提高兼容性，当第一个字体无法找到时就用第二个字体 */
         }
+
+        body {
+            font-size: 20px;
+            font-weight: 700;
+            /* 字体粗细设置，详见手册 */
+            font-style: normal;
+            /* 文字样式（风格），italic表示斜体 */
+            text-align: left;
+            /* 文本对齐方式设置 */
+            /* 本质上是让某个区域内的文字水平居中，但是不会让某个区块（如div）居中 */
+
+
+        }
+
+        /* 字体复合属性 */
+        /* 书写规范： font: font-style font-weight font-size/line-height font-family; */
+        /* 必须有 font-size 和 font-family 属性，其他的用不到的可以省略（取默认值），而且各属性的顺序不可颠倒 */
+        .fuheshuxing {
+            font: italic 700 16px/20px "宋体";
+        }
+
+        /* 这样定义的 body 能修改其中所有的元素，但是 <h> 标签比较特殊，需要单独指定大小 */
     </style>
 
 </head>
