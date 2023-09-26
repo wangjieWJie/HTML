@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS 初步了解</title>
 
+    <!-- 1、内部样式表：放在 html 文件里的<style>标签里的 CSS 称为“内部样式表”（嵌入式引入） ，常在练习时使用。理论上说，style标签放在哪里都可以，但是一般都放在head标签里 -->
+    <!-- 2、行内样式表：就是把 style 写在元素标签内部，又称为（内联式样式表），详情请见下面的“行内样式表”一行 -->
+    <!-- 3、外部样式表：新建一个CSS文件，需要用 link 标签引入。  最常用的方法，可以控制多个页面 -->
+
+    <link rel="stylesheet" href="5、CSS初步.CSS">
     <style>
         /* CSS就是  ：  选择器{样式:数值} */
         /* 或      ：  给谁改样式{改什么样式} */
@@ -56,14 +61,39 @@
             font-size: 20px;
             font-weight: 700;
             /* 字体粗细设置，详见手册 */
+
             font-style: normal;
             /* 文字样式（风格），italic表示斜体 */
+
             text-align: left;
             /* 文本对齐方式设置 */
             /* 本质上是让某个区域内的文字水平居中，但是不会让某个区块（如div）居中 */
 
+            text-decoration: none;
+            /* 装饰文本 */
+            /* 上面是取消链接的下划线，详情见下面的介绍 */
 
         }
+
+        .text {
+            /* 装饰文本 */
+            /* 给文本添加下划线、删除线、上划线等 */
+            /* 默认：none;   下划线：underline;   上划线： overline;  删除线：line-through  */
+            text-decoration: overline;
+
+            /* 文本缩进 */
+            /* 通常是将段首缩进，（段指的是<p>) */
+            text-indent: 2em;
+            /* 2em 是指缩进当前元素 2 个文字大小的距离,是一个相对单位。也可以写 20px,表示缩进20像素,但是指定像素会由于文字的大小(像素)不同而产生不同的视觉效果,所以不推荐使用指定像素的缩进 */
+
+            /* 行间距设置 */
+            /* 即行高，是上间距、下间距和行高之和 ,所以要是使用像素来表示的话，需要算上你的字体是多高的像素，把他也加上去*/
+            line-height: 1em;
+
+
+
+        }
+
 
         /* 字体复合属性 */
         /* 书写规范： font: font-style font-weight font-size/line-height font-family; */
@@ -90,6 +120,8 @@
 
     <div id="black-pink"> 粉墨年华</div>
 
+
+    <div style="color:brown; font-size: 30px;line-height: 3em; text-align: center;">行内样式表</div>
     <!-- 二： CSS 字体属性 -->
 
     <!-- 1. 字体-->
