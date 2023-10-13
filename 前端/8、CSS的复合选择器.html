@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS复合选择器</title>
+    <style>
+        /* 在CSS中可以把选择器分为基础选择器和复合选择器 */
+        /* 复合选择器是建立在基础选择器的基础之上，对基本选择器进行组合形成的 */
+        /* 常用的复合选择器包括：后代选择器、子选择器、并集选择器、伪类选择器等等 */
+
+
+        /* 1 后代选择器（重要） */
+        /* 元素1 元素2 元素3 { 样式声名 } */
+        /* 中间忽略元素2直接写元素3也可以，只要是元素1的子级即可 */
+
+        /* 修改 ol 中的 li 的属性 */
+        ol li {
+            color: pink;
+            height: 60px;
+            font-size: 3em;
+        }
+
+        /* 也可以是修改某个类选择器中的某个元素 */
+        /* 目的是区分不同的 ul ，方便把他们修改成不同的样式 */
+        .chenge li a {
+            color: brown;
+            font-size: 2em;
+        }
+
+
+
+        /* 2 子选择器（重要） */
+        /* 元素1 > 元素2 { 样式声名 } */
+        /* 亲儿子选择器：只能选择某元素的最近的一级子元素 */
+
+
+
+        /* 3 并集选择器(重要) */
+        /* 元素1,元素2 { 样式声名 } */
+        /* 并集选择器可以选择多种标签，同时为他们定义相同的类型。通常用于集体声名 */
+        /* 一般是竖着写 */
+
+        p,
+        xr,
+        .pig>a {
+            color: purple;
+            font-size: 2em;
+
+        }
+
+
+        /* 4 伪类选择器 */
+        /* 伪类选择器用于向某些选择器添加特殊的效果，比如给链接添加特殊效果，或选择第1、第n个元素 */
+        /* 包括链接伪类、结构伪类等等 */
+        /* 4.1 链接伪类选择器 */
+        /* a:link       选择所有未被访问的链接 */
+        /* a:visited    选择所有已被访问的链接*/
+        /* a:hover      选择鼠标指针位于其上的链接 */
+        /* a:active     选择活动链接(鼠标按下未弹起的链接) */
+
+        a:link {
+            color: red;
+            font-style: italic;
+        }
+
+        a:hover {
+            color: blueviolet;
+            font-size: 2.5em;
+        }
+
+        a:active {
+            color: rgb(32, 4, 58);
+            font-size: 3em
+        }
+
+        /* a:visited {
+            color: antiquewhite;
+            font-style: normal;
+
+        } */
+    </style>
+</head>
+
+<!--————————————————————————————————————————————————————————————————————————-->
+
+<body>
+
+    <ol>
+        <li>我是ol的孩子</li>
+        <li>我是ol的孩子</li>
+        <li>我是ol的孩子</li>
+    </ol>
+
+
+    <!-- 添加一个选择器，以便于和 ul 区分开 -->
+    <ul class="chenge">
+        <li>我是ul的孩子</li>
+        <li>我是ul的孩子</li>
+        <li>我是ul的孩子</li>
+        <li><a href="#">我是孙子</a></li>
+    </ul>
+
+
+    <p>熊大</p>
+    <xr>熊二</xr><br>
+    <span>光头强</span>
+    <ul class="pig">
+        <a href="#">小猪佩奇</a>
+        <li><a href="#">猪猪侠</a></li>
+        <li>猪妈妈</li>
+        <li>猪爸爸</li>
+    </ul>
+
+</body>
+
+</html>

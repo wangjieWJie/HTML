@@ -1,5 +1,8 @@
 /* 这CSS文件里只有样式，没有标签 */
 
+/* 引入方式： <link rel="stylesheet" href="5、CSS初步.CSS"> */
+/* 同一路径下直接写css文件名即可 */
+
 .suibianxied {
 
     color: rgb(19, 204, 211);
