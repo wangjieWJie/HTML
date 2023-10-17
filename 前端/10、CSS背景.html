@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS背景</title>
+
+    <style>
+        /* 背景属性有：背景颜色、背景图片、背景平铺、背景图片位置、背景图片固定等 */
+        /* 
+         */
+        /* 背景图片 backgrouond-image  */
+        /* 常用于logo或者一些装饰性的小图片或者是
+           超大的背景图片，优点是非常便于控制位置 */
+        .GS {
+            height: 148px;
+            width: 2840px;
+            background-image: url(https://webstatic.mihoyo.com/upload/op-public/2021/10/09/def1f2abcfc2af0bbe2e5900a60a5ee1_5699547505742166353.png);
+            /* 背景平铺 */
+            /* background-repeat: no-repeat 、repeat 、repeat-x、repeat-y; 
+                                       不平铺、   平铺、沿X轴平铺、沿Y轴平铺  */
+            background-repeat: no-repeat;
+
+            /* 背景图片和背景颜色可以同时设置  */
+            /* background-color: #47c4c46e; */
+
+            /* 背景图片位置 */
+            /* background-position: X Y;  或者加方位名词：top、center、bottom ; left、center、right  */
+            background-position: 20px center;
+            /* 两个方向名词没有顺序，先写谁都可以。如果只写一个方向的对齐方式，那么另一个就垂直居中 */
+            /* 如果使用精确坐标时，省略第二个坐标则会使其垂直居中 */
+            /* 精确单位和方位名词可以混合使用，使用时第一个是X坐标，第二个是Y坐标 */
+
+        }
+
+        .big-image {
+            width: 2840px;
+            height: 1480px;
+            background-position: top center;
+            background-image: url(https://webstatic.mihoyo.com/upload/op-public/2021/10/03/58574b8c47e058787cc24049413b7cea_7872872512863208275.png);
+            background-color: #47c4c46e;
+            /* 3、背景附着 */
+            /* 背景图像是否固定或者随着页面的其余部分滚动 */
+            /* background-attachment: fixed、scroll;    */
+            /* fixde: 背景图像固定 */
+            /* csroll: 背景图像随对象内容移动（默认效果） */
+            background-attachment: fixed;
+
+
+        }
+
+        /* 3、背景附着 */
+        /* 背景图像是否固定或者随着页面的其余部分滚动 */
+        /* 
+         */
+
+
+        /* 4、背景复合写法 */
+        /* 实际开发中一般使用的是：背景复合写法： */
+        .FH {
+            background: transparent url(chrome-search://local-ntp/edge_background.jpg?ts=1678637858) no-repeat fixde top;
+        }
+
+        /* 使用简写属性时，没有特定的书写顺序，一般约定为： */
+        /* 背景颜色、背景图片地址、背景平铺、背景图像滚动、背景图片位置 */
+        /* background: transparent url() norepeat fixde top */
+
+
+
+        /* 5、背景色半透明 */
+        /* background: rgba(0, 0, 0, 0.3) */
+        /* 最后一个参数为alpha透明度，取值在0~1之间 */
+        /* 一般最后的透明度把0省略掉，直接写 .几 */
+    </style>
+
+</head>
+
+<body>
+
+    <!-- <div class="GS"> </div> -->
+
+    <div class="big-image">
+        <div class="GS"></div>
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>
