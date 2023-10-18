@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子模型</title>
+
+    <style>
+        /* 页面布局三大核心：盒子模型、浮动、定位 */
+
+        /* 盒子模型的组成 */
+        /* border 边框    content 内容    padding 内边距   margin 外边距 */
+
+
+        /* 1、边框 border */
+        /* 边框宽度（粗细）border-width 、边框样式 border-style 、边框颜色 border-color */
+        .box1 {
+            width: 300px;
+            height: 200px;
+            border-width: 5px;
+            /* 边框样式：  solid 实线、dashed 虚线、dotted  点线*/
+            border-style: dotted;
+            border-color: cadetblue;
+            background-color: #e0c0cd;
+
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        /* 边框样式简写 */
+        .box2 {
+
+            border: 1px solid rebeccapurple;
+            /* 没有顺序 */
+
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        /* 上下左右边框 */
+        .box3 {
+
+            border-top: 10px dashed #f0f;
+            border-bottom: 5px dashed #e0c0cd;
+            border-left: 5px dashed #abcd;
+            border-right: 15px solid #def;
+            width: 100px;
+            height: 100px;
+            /* 如果这里还有 border 那么就符合层叠性，遵循就近原则 */
+            /* 所以一般 把border 写在最上面 */
+
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        /* 边框会影响盒子的实际大小 */
+
+
+
+
+        /* 2、内容： content */
+        .box4 {
+
+            width: 200px;
+            height: 100px;
+            /* 2.1、 内边距： */
+            padding-left: 20px;
+            padding-top: 30px;
+            padding-right: 20px;
+
+            border-style: solid;
+            /* 内边距复合写法（简写） */
+            /* 上下左右 5  */
+            padding: 5px;
+            /* 上下 5， 左右 10 */
+            padding: 5px 10px;
+            /* 上 5，左右 10，下 5 */
+            padding: 5px 10px 15px;
+            /* 上 5，右 10，下 15，左 20， 顺时针旋转 */
+            padding: 5px 10px 15px 20px;
+
+            /* 内边距会影响盒子的实际大小,同边框相同，额外增加在盒子上，使得盒子变大 */
+
+            text-align: center;
+            margin: 0 auto;
+        }
+
+
+
+
+
+        /* 3、外边距 margin */
+        .box5 {
+
+            /* 下边距 */
+            margin-bottom: 20px;
+            /* 其简写（复合）书写规则完全和 padding 相同 */
+            margin: 20px;
+
+            text-align: center;
+            margin: 0 auto;
+        }
+
+
+
+        /* 4、应用注意事项 */
+
+        /* 4.1、外边距可以让盒子水平居中，但是必须满足两点： */
+        /* 一、盒子必须指定了宽度 width */
+        /* 二、盒子左右的外边距都设置为 auto */
+        /* 即：width:XXX;  margin: 0 auto; */
+        /* 只针对于最外边的盒子（块级元素）有效，行内元素或者行内块元素只需给其父元素添加 text-align: center 即可 */
+
+
+
+        /* 4.2外边距的合并（塌陷） */
+        /* 嵌套块元素垂直外边距的塌陷 */
+        /* 在垂直方向上 当一个有外边距的父元素的子元素也有外边距时，父元素的外边距可能为这两个外边距的和。而子元素失去它的外边距 */
+        /* 解决方案： */
+        /* ①：为父元素添加上内边框 */
+        /* ②：为父元素定义上边框（透明为：transparent) */
+        /* ③：可以为父元素添加 overflow: hidden */
+        /* 最后一种未知原理，但是加上之后确实解决了塌陷的问题 */
+
+
+
+        /* 4.3、清除内外边距 */
+        /* 很多网页元素都自带默认的内外边距，而且不同的浏览器都不相同。因此在布局前，应该先清除网页元素的内外边距 */
+        /* 可以使用 ： *{ padding:0;   margin:0;}   */
+        /* 使用通配符选择器，可以很容易的把网页内所有的内外边距清除，并且其权重很低 */
+
+
+        /* 4.5、行内元素为了照顾兼容性，尽量只设置作于内外边距，不要设置上下内外边距。但是转换为块级和行内块元素就可以了 */
+    </style>
+
+</head>
+
+<body>
+
+    <div class="box1">点线边框</div> <br>
+    <div class="box2">实线边框</div> <br>
+    <div class="box3">定制边框</div> <br>
+    <div class="box4">内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</div>
+    <!-- 看到了第156节课 -->
+
+
+
+
+
+</body>
+
+</html>
+
+
+<!-- 看到了第156节课 -->
