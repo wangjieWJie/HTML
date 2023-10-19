@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>产品模块</title>
+
+    <!-- 
+        产品设计注意事项：
+         1、根据标签的语义合理使用标签。比如产品标题使用<h> ,大量文字段落使用<P>
+         2、padding和margin各有优缺，根据实际情况随便用
+         3、有时一竖列的条例（新闻预览）都需要用到 <li> 标签
+            但是<li>标签前面有一个小圆点，删除小圆点的语法为： list-style: none;
+
+
+
+
+
+
+
+    -->
+
+
+
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        a {
+            color: #000000;
+            text-decoration: none;
+        }
+
+        .all {
+            text-align: center;
+        }
+
+        body {
+            background-color: #f5f5f5;
+        }
+
+
+
+        /* div容器相关样式设置 */
+        .box {
+            display: inline-block;
+
+            width: 298px;
+            height: 415px;
+            background-color: #fff;
+            /* 使块级盒子水平居中 : 即将左右边距改为 auto 即可*/
+            margin: 60px auto;
+            text-align: left;
+        }
+
+
+        /* 图片相关样式设置 */
+        .box img {
+            /* 设置为 100% 图片即可按照宽度填充图片 */
+            width: 100%;
+        }
+
+
+        /* 段落的相关样式的设置 */
+        .reviwe {
+            font: 14px 'Misans Serif';
+            /* 因为这个段落必须要有高度，否则文字太多的时候就会超出范围 */
+            height: 70px;
+            /* 想要它两边和盒子有个空隙，所以给他设置一个padding或者是margin都可以 */
+            padding: 0 28px;
+            /* 因为这个 p 没有宽度，所以不用担心padding把盒子撑大 */
+            /* 评论上面还有个空隙，但是这个p他有高度，所以设置padding的时候会撑大盒子，最后还要重新调整盒子的高度，所以这里使用margin设置review上面的空隙*/
+            margin-top: 30px;
+        }
+
+
+        /* div容器内div样式的相关设置 */
+        .appraise {
+            font: 14px 'misans serif';
+            color: #b0b0b0;
+            height: 15px;
+            padding: 0 28px;
+            margin-top: 20px;
+        }
+
+        /* 一个info总起，概括了下面两个盒子的字体大小和四周边距 */
+        .info {
+            font: 14px 'Misans Serif';
+            padding: 0 28px;
+            margin-top: 15px;
+        }
+
+        .info h4 {
+            font-weight: 400;
+            display: inline-block;
+            height: 14px;
+        }
+
+        .info span {
+            font: 14px 'Misans Serif';
+            color: #ff6700;
+        }
+
+        .info em {
+            font-style: normal;
+            color: #ebe4e0;
+            margin: 0 6px 0 15px;
+            font-weight: 800;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="all">
+        <div class="box">
+            <a href="#"><img src="mi/MiPod.png" alt="#"></a>
+            <p class="reviwe"><a href="#">收到货了，物流很快，孩子很爱吃，客服也很慈祥。而且运行速度很快，一点都不卡。好评</a></p>
+            <div class="appraise">来自于 187***666 的评价</div>
+            <div class="info">
+                <h4><a href="#">Redmi AirDots无线蓝…</a></h4>
+                <em>|</em>
+                <span> 99.9元</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <a href="#"><img src="mi/MiPod.png" alt="#"></a>
+            <p class="reviwe"><a href="#">收到货了，物流很快，孩子很爱吃，客服也很慈祥。而且运行速度很快，一点都不卡。好评</a></p>
+            <div class="appraise">来自于 187***666 的评价</div>
+            <div class="info">
+                <h4><a href="#">Redmi AirDots无线蓝…</a></h4>
+                <em>|</em>
+                <span> 99.9元</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <a href="#"><img src="mi/MiPod.png" alt="#"></a>
+            <p class="reviwe"><a href="#">收到货了，物流很快，孩子很爱吃，客服也很慈祥。而且运行速度很快，一点都不卡。好评</a></p>
+            <div class="appraise">来自于 187***666 的评价</div>
+            <div class="info">
+                <h4><a href="#">Redmi AirDots无线蓝…</a></h4>
+                <em>|</em>
+                <span> 99.9元</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <a href="#"><img src="mi/MiPod.png" alt="#"></a>
+            <p class="reviwe"><a href="#">收到货了，物流很快，孩子很爱吃，客服也很慈祥。而且运行速度很快，一点都不卡。好评</a></p>
+            <div class="appraise">来自于 187***666 的评价</div>
+            <div class="info">
+                <h4><a href="#">Redmi AirDots无线蓝…</a></h4>
+                <em>|</em>
+                <span> 99.9元</span>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+</body>
+
+</html>

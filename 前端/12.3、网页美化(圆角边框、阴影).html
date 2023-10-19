@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网页美化 </title>
+    <style>
+        /* 1、CSS3 最新更新：圆角边框 */
+        .roll1 {
+            margin: 60px auto;
+            font: 14px 'Misans Serif';
+            line-height: 45px;
+            color: #fff;
+            text-align: center;
+
+            width: 100px;
+            height: 45px;
+            background-color: darkgreen;
+
+            /* 圆角边框: */
+            border-radius: 10px;
+            /* 后面数值代表一个圆的半径 */
+            /* 原理就是把一个半径为50的⚪或椭圆怼在边框的四个角上，保留两个切点之间的弧，而去掉之前的直线边角，于是就得到了一个弧形的角 */
+
+        }
+
+        .roll2 {
+            margin: 60px auto;
+            font: 14px 'Misans Serif';
+            line-height: 100px;
+            color: #fff;
+            text-align: center;
+
+            width: 100px;
+            height: 100px;
+            background-color: darkgreen;
+
+            /* 圆形的做法：: */
+            border-radius: 60px;
+            /* 首先设置一个方形的盒子 */
+            /* 然后随便设置一个直径大于盒子边长一半的圆作为角弧 */
+            /* 另外，这个宽度可以用百分比来表示，设置 50% 就代表盒子宽度和高度的一半，即可实现想要的效果 */
+
+        }
+
+        .roll3 {
+            margin: 60px auto;
+            font: 14px 'Misans Serif';
+            line-height: 50px;
+            color: #fff;
+            text-align: center;
+
+            width: 100px;
+            height: 50px;
+            background-color: darkgreen;
+
+            /* 圆角矩形的做法：: */
+            border-radius: 60px;
+            /* 半径为矩形高的一半以上即可 */
+
+        }
+    </style>
+</head>
+<div class="roll1">
+    圆形边框初试
+</div>
+<div class="roll2">
+    圆形的做法
+</div>
+<div class="roll3">
+    圆角矩阵的做法
+</div>
+
+<body>
+
+</body>
+
+</html>
